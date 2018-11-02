@@ -23,7 +23,9 @@ class App extends Component {
   }
 
   createProduct(name, imageurl, price) {
+    console.log('asdfklj')
     axios.post(`/api/products`, {name, imageurl, price}).then(results=>{
+      console.log(results.data)
       this.setState({inventory: results.data});
     })
   }
